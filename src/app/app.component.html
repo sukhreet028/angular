@@ -1,0 +1,98 @@
+<h1>{{ title }}</h1>
+<h1>hello</h1>
+<br />
+
+<!-- <button type="button" (click)="myFun(input.value)">Click me</button> -->
+<!-- <h3>{{ currentVal }}</h3> -->
+<!-- <div class="mouse" (mouseleave)="myFun('mouse over')">hello everyone</div> -->
+<br />
+<br />
+<!-- <input type="text" [placeholder]="value" /> -->
+
+<!-- <p *ngIf="show == 'yes'; then ifPart; else elsePart"></p>
+<ng-template #ifPart> <h2>if block</h2> </ng-template>
+<ng-template #elsePart> <h2>else block</h2> </ng-template> -->
+
+<!-- <h2 [ngSwitch]="show">
+  <h1 *ngSwitchCase="'apple'">appple block</h1>
+  <h1 *ngSwitchCase="'mango'">mango block</h1>
+  <h1 *ngSwitchCase="'banana'">banana block</h1>
+</h2> -->
+<!-- <h1 *ngFor="let data of show">
+  {{ data.name }}
+</h1> -->
+
+<!-- <form #myForm="ngForm" (ngSubmit)="getVal(myForm.value)">
+  <input
+    type="text"
+    ngModel
+    name="username"
+    placeholder="Enter Username"
+  /><br /><br />
+  <input
+    type="password"
+    ngModel
+    name="password"
+    placeholder="Enter password"
+  /><br /><br />
+  <button>Submit</button>:
+</form> -->
+<h2 style="color: red">header1</h2>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input
+            id="dateOfBirth"
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="dp"
+            ngbDatepicker
+            #dp="ngbDatepicker"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary calendar"
+              (click)="dp.toggle()"
+              type="button"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('Save click')"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+  Launch demo modal
+</button>
+<br /><br />
+<button mat-button>hello</button>
+<br /><br />
+<button mat-button color="warn">Warn</button>
+<button mat-button color="accent">Accent</button>
+<button mat-button disabled>Disabled</button>
+
+<hr />

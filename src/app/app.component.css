@@ -1,0 +1,10 @@
+h1 {
+  color: skyblue;
+  text-align: center;
+}
+.mouse {
+  margin: 20px;
+  height: 20px;
+  width: 100%;
+  background-color: pink;
+}
